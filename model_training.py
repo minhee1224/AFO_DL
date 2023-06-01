@@ -346,7 +346,7 @@ for LR in [0.0001]:
             num += 1
             data_dir = calib_data_path + name + "/force_conversion_test.csv"
             model_dir = model_path + name + "LR%s.pt" % lr
-            final_test_loss, history = LSTMtraining_re(num, data_dir, DEVICE,
+            final_test_loss, history = LSTMtraining(data_dir, DEVICE,
                                           model_dir=model_dir,
                                           BATCH_SIZE=BATCH_SIZE, EPOCHS=EPOCHS,
                                           LR=lr, N_WARMUP_STEPS=N_WARMUP_STEPS,
